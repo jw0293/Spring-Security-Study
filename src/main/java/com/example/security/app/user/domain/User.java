@@ -19,7 +19,7 @@ public class User extends Common implements Serializable {
     private String email;
 
     @Setter
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String pw;
 
     @Setter
