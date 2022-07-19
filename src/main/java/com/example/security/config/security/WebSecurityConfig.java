@@ -93,7 +93,7 @@ public class WebSecurityConfig {
         return new CustomLoginSuccessHandler();
     }
 
-    @Bean @Lazy
+    @Bean
     public CustomAuthenticationProvider customAuthenticationProvider(){
         return new CustomAuthenticationProvider(userDetailsService, bCryptPasswordEncoder());
     }
