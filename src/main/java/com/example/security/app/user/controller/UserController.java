@@ -12,17 +12,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/user")
 public class UserController {
 
-    private UserService userService;
-    private BCryptPasswordEncoder passwordEncoder;
-
-
-    public UserController(@Lazy UserService userService, @Lazy BCryptPasswordEncoder passwordEncoder) {
-        this.userService = userService;
-        this.passwordEncoder = passwordEncoder;
-    }
+    private final UserService userService;
+    private final BCryptPasswordEncoder passwordEncoder;
 
     @PostMapping("/signUp")
     public ResponseEntity<String> signUp(@RequestBody final SignUpDto signUpDto){
