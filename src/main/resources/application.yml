@@ -1,0 +1,30 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/sectoken
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      generate-ddl: true
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    open-in-view: false
+
+  main:
+    allow-circular-references: false
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.springframework: debug
+    org.springframework.web: debug
+
