@@ -1,4 +1,4 @@
-package com.example.security.config.interceptor;
+package com.example.security.app.user.service.config.interceptor;
 
 import com.example.security.constants.AuthConstants;
 import com.example.security.utils.TokenUtils;
